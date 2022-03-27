@@ -1,0 +1,34 @@
+# ArgoWorkflows::GithubComArgoprojLabsArgoDataflowApiV1alpha1Source
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **cron** | [**GithubComArgoprojLabsArgoDataflowApiV1alpha1Cron**](GithubComArgoprojLabsArgoDataflowApiV1alpha1Cron.md) |  | [optional] |
+| **db** | [**GithubComArgoprojLabsArgoDataflowApiV1alpha1DBSource**](GithubComArgoprojLabsArgoDataflowApiV1alpha1DBSource.md) |  | [optional] |
+| **http** | [**GithubComArgoprojLabsArgoDataflowApiV1alpha1HTTPSource**](GithubComArgoprojLabsArgoDataflowApiV1alpha1HTTPSource.md) |  | [optional] |
+| **kafka** | [**GithubComArgoprojLabsArgoDataflowApiV1alpha1KafkaSource**](GithubComArgoprojLabsArgoDataflowApiV1alpha1KafkaSource.md) |  | [optional] |
+| **name** | **String** |  | [optional] |
+| **_retry** | [**GithubComArgoprojLabsArgoDataflowApiV1alpha1Backoff**](GithubComArgoprojLabsArgoDataflowApiV1alpha1Backoff.md) |  | [optional] |
+| **s3** | [**GithubComArgoprojLabsArgoDataflowApiV1alpha1S3Source**](GithubComArgoprojLabsArgoDataflowApiV1alpha1S3Source.md) |  | [optional] |
+| **stan** | [**GithubComArgoprojLabsArgoDataflowApiV1alpha1STAN**](GithubComArgoprojLabsArgoDataflowApiV1alpha1STAN.md) |  | [optional] |
+| **volume** | [**GithubComArgoprojLabsArgoDataflowApiV1alpha1VolumeSource**](GithubComArgoprojLabsArgoDataflowApiV1alpha1VolumeSource.md) |  | [optional] |
+
+## Example
+
+```ruby
+require 'argo_workflows'
+
+instance = ArgoWorkflows::GithubComArgoprojLabsArgoDataflowApiV1alpha1Source.new(
+  cron: null,
+  db: null,
+  http: null,
+  kafka: null,
+  name: null,
+  _retry: null,
+  s3: null,
+  stan: null,
+  volume: null
+)
+```
+

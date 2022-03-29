@@ -14,10 +14,14 @@ require 'date'
 require 'time'
 
 module ArgoWorkflows
-  class IoArgoprojWorkflowV1alpha1ParallelSteps < Array
+  class IoArgoprojWorkflowV1alpha1ParallelSteps
     # Attribute mapping from ruby-style variable name to JSON key.
+
+    attr_accessor :value
+
     def self.attribute_map
       {
+        :'value' => :'value',
       }
     end
 
@@ -29,6 +33,7 @@ module ArgoWorkflows
     # Attribute type mapping.
     def self.openapi_types
       {
+        :'value' => :'Array<IoArgoprojWorkflowV1alpha1WorkflowStep>',
       }
     end
 
@@ -52,26 +57,31 @@ module ArgoWorkflows
         end
         h[k.to_sym] = v
       }
+
+      if attributes.key?(:'value')
+        if (value = attributes[:'value']).is_a?(Array)
+          self.value = attributes[:'value']
+        end
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properties with the reasons
     def list_invalid_properties
-      invalid_properties = super
       invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      true && super
+      true
     end
 
     # Checks equality by comparing each attribute.
     # @param [Object] Object to be compared
     def ==(o)
       return true if self.equal?(o)
-      self.class == o.class && super(o)
+      self.class == o.class && value == o.value
     end
 
     # @see the `==` method
@@ -83,7 +93,7 @@ module ArgoWorkflows
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [].hash
+      [value].hash
     end
 
     # Builds the object from hash
@@ -174,7 +184,7 @@ module ArgoWorkflows
     # Returns the object in the form of hash
     # @return [Hash] Returns the object in the form of hash
     def to_hash
-      hash = super
+      hash = {}
       self.class.attribute_map.each_pair do |attr, param|
         value = self.send(attr)
         if value.nil?
@@ -184,7 +194,7 @@ module ArgoWorkflows
 
         hash[param] = _to_hash(value)
       end
-      hash
+      hash[:value]
     end
 
     # Outputs non-array value in the form of hash

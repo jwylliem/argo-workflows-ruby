@@ -227,6 +227,8 @@ module ArgoWorkflows
 
       fail "Content-Type is not supported: #{content_type}" unless json_mime?(content_type)
 
+      return deserialize_stream(body, return_type) if return_type.start_with? 'Stream'
+
       begin
         data = JSON.parse("[#{body}]", :symbolize_names => true)[0]
       rescue JSON::ParserError => e
@@ -238,6 +240,17 @@ module ArgoWorkflows
       end
 
       convert_to_type data, return_type
+    end
+
+    # Handle stream deserialization
+    # param [String] body is the response to be converted
+    # @param [String] return_type Return type
+    # @return [Mixed] Data in a particular type
+    def deserialize_stream(body, return_type)
+      result = body.split("\n").map{|a|JSON.parse("[#{a}]", :symbolize_names => true)[0]}.map do |entry|
+        convert_to_type entry, return_type
+      end
+      result
     end
 
     # Convert data to the given return type.

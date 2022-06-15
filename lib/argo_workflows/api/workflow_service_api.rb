@@ -19,8 +19,8 @@ module ArgoWorkflows
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # @param namespace [String] 
-    # @param body [IoArgoprojWorkflowV1alpha1WorkflowCreateRequest] 
+    # @param namespace [String]
+    # @param body [IoArgoprojWorkflowV1alpha1WorkflowCreateRequest]
     # @param [Hash] opts the optional parameters
     # @return [IoArgoprojWorkflowV1alpha1Workflow]
     def create_workflow(namespace, body, opts = {})
@@ -28,8 +28,8 @@ module ArgoWorkflows
       data
     end
 
-    # @param namespace [String] 
-    # @param body [IoArgoprojWorkflowV1alpha1WorkflowCreateRequest] 
+    # @param namespace [String]
+    # @param body [IoArgoprojWorkflowV1alpha1WorkflowCreateRequest]
     # @param [Hash] opts the optional parameters
     # @return [Array<(IoArgoprojWorkflowV1alpha1Workflow, Integer, Hash)>] IoArgoprojWorkflowV1alpha1Workflow data, response status code and response headers
     def create_workflow_with_http_info(namespace, body, opts = {})
@@ -86,8 +86,8 @@ module ArgoWorkflows
       return data, status_code, headers
     end
 
-    # @param namespace [String] 
-    # @param name [String] 
+    # @param namespace [String]
+    # @param name [String]
     # @param [Hash] opts the optional parameters
     # @option opts [String] :delete_options_grace_period_seconds The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. +optional.
     # @option opts [String] :delete_options_preconditions_uid Specifies the target UID. +optional.
@@ -101,8 +101,8 @@ module ArgoWorkflows
       data
     end
 
-    # @param namespace [String] 
-    # @param name [String] 
+    # @param namespace [String]
+    # @param name [String]
     # @param [Hash] opts the optional parameters
     # @option opts [String] :delete_options_grace_period_seconds The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. +optional.
     # @option opts [String] :delete_options_preconditions_uid Specifies the target UID. +optional.
@@ -169,8 +169,8 @@ module ArgoWorkflows
       return data, status_code, headers
     end
 
-    # @param namespace [String] 
-    # @param name [String] 
+    # @param namespace [String]
+    # @param name [String]
     # @param [Hash] opts the optional parameters
     # @option opts [String] :get_options_resource_version resourceVersion sets a constraint on what resource versions a request may be served from. See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset +optional
     # @option opts [String] :fields Fields to be included or excluded in the response. e.g. \&quot;spec,status.phase\&quot;, \&quot;-status.nodes\&quot;.
@@ -180,8 +180,8 @@ module ArgoWorkflows
       data
     end
 
-    # @param namespace [String] 
-    # @param name [String] 
+    # @param namespace [String]
+    # @param name [String]
     # @param [Hash] opts the optional parameters
     # @option opts [String] :get_options_resource_version resourceVersion sets a constraint on what resource versions a request may be served from. See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset +optional
     # @option opts [String] :fields Fields to be included or excluded in the response. e.g. \&quot;spec,status.phase\&quot;, \&quot;-status.nodes\&quot;.
@@ -240,8 +240,8 @@ module ArgoWorkflows
       return data, status_code, headers
     end
 
-    # @param namespace [String] 
-    # @param body [IoArgoprojWorkflowV1alpha1WorkflowLintRequest] 
+    # @param namespace [String]
+    # @param body [IoArgoprojWorkflowV1alpha1WorkflowLintRequest]
     # @param [Hash] opts the optional parameters
     # @return [IoArgoprojWorkflowV1alpha1Workflow]
     def lint_workflow(namespace, body, opts = {})
@@ -249,8 +249,8 @@ module ArgoWorkflows
       data
     end
 
-    # @param namespace [String] 
-    # @param body [IoArgoprojWorkflowV1alpha1WorkflowLintRequest] 
+    # @param namespace [String]
+    # @param body [IoArgoprojWorkflowV1alpha1WorkflowLintRequest]
     # @param [Hash] opts the optional parameters
     # @return [Array<(IoArgoprojWorkflowV1alpha1Workflow, Integer, Hash)>] IoArgoprojWorkflowV1alpha1Workflow data, response status code and response headers
     def lint_workflow_with_http_info(namespace, body, opts = {})
@@ -307,7 +307,7 @@ module ArgoWorkflows
       return data, status_code, headers
     end
 
-    # @param namespace [String] 
+    # @param namespace [String]
     # @param [Hash] opts the optional parameters
     # @option opts [String] :list_options_label_selector A selector to restrict the list of returned objects by their labels. Defaults to everything. +optional.
     # @option opts [String] :list_options_field_selector A selector to restrict the list of returned objects by their fields. Defaults to everything. +optional.
@@ -325,7 +325,7 @@ module ArgoWorkflows
       data
     end
 
-    # @param namespace [String] 
+    # @param namespace [String]
     # @param [Hash] opts the optional parameters
     # @option opts [String] :list_options_label_selector A selector to restrict the list of returned objects by their labels. Defaults to everything. +optional.
     # @option opts [String] :list_options_field_selector A selector to restrict the list of returned objects by their fields. Defaults to everything. +optional.
@@ -397,9 +397,9 @@ module ArgoWorkflows
     end
 
     # DEPRECATED: Cannot work via HTTP if podName is an empty string. Use WorkflowLogs.
-    # @param namespace [String] 
-    # @param name [String] 
-    # @param pod_name [String] 
+    # @param namespace [String]
+    # @param name [String]
+    # @param pod_name [String]
     # @param [Hash] opts the optional parameters
     # @option opts [String] :log_options_container The container for which to stream logs. Defaults to only container if there is one container in the pod. +optional.
     # @option opts [Boolean] :log_options_follow Follow the log stream of the pod. Defaults to false. +optional.
@@ -411,8 +411,8 @@ module ArgoWorkflows
     # @option opts [String] :log_options_tail_lines If set, the number of lines from the end of the logs to show. If not specified, logs are shown from the creation of the container or sinceSeconds or sinceTime +optional.
     # @option opts [String] :log_options_limit_bytes If set, the number of bytes to read from the server before terminating the log output. This may not display a complete final line of logging, and may return slightly more or slightly less than the specified limit. +optional.
     # @option opts [Boolean] :log_options_insecure_skip_tls_verify_backend insecureSkipTLSVerifyBackend indicates that the apiserver should not confirm the validity of the serving certificate of the backend it is connecting to.  This will make the HTTPS connection between the apiserver and the backend insecure. This means the apiserver cannot verify the log data it is receiving came from the real kubelet.  If the kubelet is configured to verify the apiserver&#39;s TLS credentials, it does not mean the connection to the real kubelet is vulnerable to a man in the middle attack (e.g. an attacker could not intercept the actual log data coming from the real kubelet). +optional.
-    # @option opts [String] :grep 
-    # @option opts [String] :selector 
+    # @option opts [String] :grep
+    # @option opts [String] :selector
     # @return [StreamResultOfIoArgoprojWorkflowV1alpha1LogEntry]
     def pod_logs(namespace, name, pod_name, opts = {})
       data, _status_code, _headers = pod_logs_with_http_info(namespace, name, pod_name, opts)
@@ -420,9 +420,9 @@ module ArgoWorkflows
     end
 
     # DEPRECATED: Cannot work via HTTP if podName is an empty string. Use WorkflowLogs.
-    # @param namespace [String] 
-    # @param name [String] 
-    # @param pod_name [String] 
+    # @param namespace [String]
+    # @param name [String]
+    # @param pod_name [String]
     # @param [Hash] opts the optional parameters
     # @option opts [String] :log_options_container The container for which to stream logs. Defaults to only container if there is one container in the pod. +optional.
     # @option opts [Boolean] :log_options_follow Follow the log stream of the pod. Defaults to false. +optional.
@@ -434,8 +434,8 @@ module ArgoWorkflows
     # @option opts [String] :log_options_tail_lines If set, the number of lines from the end of the logs to show. If not specified, logs are shown from the creation of the container or sinceSeconds or sinceTime +optional.
     # @option opts [String] :log_options_limit_bytes If set, the number of bytes to read from the server before terminating the log output. This may not display a complete final line of logging, and may return slightly more or slightly less than the specified limit. +optional.
     # @option opts [Boolean] :log_options_insecure_skip_tls_verify_backend insecureSkipTLSVerifyBackend indicates that the apiserver should not confirm the validity of the serving certificate of the backend it is connecting to.  This will make the HTTPS connection between the apiserver and the backend insecure. This means the apiserver cannot verify the log data it is receiving came from the real kubelet.  If the kubelet is configured to verify the apiserver&#39;s TLS credentials, it does not mean the connection to the real kubelet is vulnerable to a man in the middle attack (e.g. an attacker could not intercept the actual log data coming from the real kubelet). +optional.
-    # @option opts [String] :grep 
-    # @option opts [String] :selector 
+    # @option opts [String] :grep
+    # @option opts [String] :selector
     # @return [Array<(StreamResultOfIoArgoprojWorkflowV1alpha1LogEntry, Integer, Hash)>] StreamResultOfIoArgoprojWorkflowV1alpha1LogEntry data, response status code and response headers
     def pod_logs_with_http_info(namespace, name, pod_name, opts = {})
       if @api_client.config.debugging
@@ -505,9 +505,9 @@ module ArgoWorkflows
       return data, status_code, headers
     end
 
-    # @param namespace [String] 
-    # @param name [String] 
-    # @param body [IoArgoprojWorkflowV1alpha1WorkflowResubmitRequest] 
+    # @param namespace [String]
+    # @param name [String]
+    # @param body [IoArgoprojWorkflowV1alpha1WorkflowResubmitRequest]
     # @param [Hash] opts the optional parameters
     # @return [IoArgoprojWorkflowV1alpha1Workflow]
     def resubmit_workflow(namespace, name, body, opts = {})
@@ -515,9 +515,9 @@ module ArgoWorkflows
       data
     end
 
-    # @param namespace [String] 
-    # @param name [String] 
-    # @param body [IoArgoprojWorkflowV1alpha1WorkflowResubmitRequest] 
+    # @param namespace [String]
+    # @param name [String]
+    # @param body [IoArgoprojWorkflowV1alpha1WorkflowResubmitRequest]
     # @param [Hash] opts the optional parameters
     # @return [Array<(IoArgoprojWorkflowV1alpha1Workflow, Integer, Hash)>] IoArgoprojWorkflowV1alpha1Workflow data, response status code and response headers
     def resubmit_workflow_with_http_info(namespace, name, body, opts = {})
@@ -578,9 +578,9 @@ module ArgoWorkflows
       return data, status_code, headers
     end
 
-    # @param namespace [String] 
-    # @param name [String] 
-    # @param body [IoArgoprojWorkflowV1alpha1WorkflowResumeRequest] 
+    # @param namespace [String]
+    # @param name [String]
+    # @param body [IoArgoprojWorkflowV1alpha1WorkflowResumeRequest]
     # @param [Hash] opts the optional parameters
     # @return [IoArgoprojWorkflowV1alpha1Workflow]
     def resume_workflow(namespace, name, body, opts = {})
@@ -588,9 +588,9 @@ module ArgoWorkflows
       data
     end
 
-    # @param namespace [String] 
-    # @param name [String] 
-    # @param body [IoArgoprojWorkflowV1alpha1WorkflowResumeRequest] 
+    # @param namespace [String]
+    # @param name [String]
+    # @param body [IoArgoprojWorkflowV1alpha1WorkflowResumeRequest]
     # @param [Hash] opts the optional parameters
     # @return [Array<(IoArgoprojWorkflowV1alpha1Workflow, Integer, Hash)>] IoArgoprojWorkflowV1alpha1Workflow data, response status code and response headers
     def resume_workflow_with_http_info(namespace, name, body, opts = {})
@@ -651,9 +651,9 @@ module ArgoWorkflows
       return data, status_code, headers
     end
 
-    # @param namespace [String] 
-    # @param name [String] 
-    # @param body [IoArgoprojWorkflowV1alpha1WorkflowRetryRequest] 
+    # @param namespace [String]
+    # @param name [String]
+    # @param body [IoArgoprojWorkflowV1alpha1WorkflowRetryRequest]
     # @param [Hash] opts the optional parameters
     # @return [IoArgoprojWorkflowV1alpha1Workflow]
     def retry_workflow(namespace, name, body, opts = {})
@@ -661,9 +661,9 @@ module ArgoWorkflows
       data
     end
 
-    # @param namespace [String] 
-    # @param name [String] 
-    # @param body [IoArgoprojWorkflowV1alpha1WorkflowRetryRequest] 
+    # @param namespace [String]
+    # @param name [String]
+    # @param body [IoArgoprojWorkflowV1alpha1WorkflowRetryRequest]
     # @param [Hash] opts the optional parameters
     # @return [Array<(IoArgoprojWorkflowV1alpha1Workflow, Integer, Hash)>] IoArgoprojWorkflowV1alpha1Workflow data, response status code and response headers
     def retry_workflow_with_http_info(namespace, name, body, opts = {})
@@ -724,9 +724,9 @@ module ArgoWorkflows
       return data, status_code, headers
     end
 
-    # @param namespace [String] 
-    # @param name [String] 
-    # @param body [IoArgoprojWorkflowV1alpha1WorkflowSetRequest] 
+    # @param namespace [String]
+    # @param name [String]
+    # @param body [IoArgoprojWorkflowV1alpha1WorkflowSetRequest]
     # @param [Hash] opts the optional parameters
     # @return [IoArgoprojWorkflowV1alpha1Workflow]
     def set_workflow(namespace, name, body, opts = {})
@@ -734,9 +734,9 @@ module ArgoWorkflows
       data
     end
 
-    # @param namespace [String] 
-    # @param name [String] 
-    # @param body [IoArgoprojWorkflowV1alpha1WorkflowSetRequest] 
+    # @param namespace [String]
+    # @param name [String]
+    # @param body [IoArgoprojWorkflowV1alpha1WorkflowSetRequest]
     # @param [Hash] opts the optional parameters
     # @return [Array<(IoArgoprojWorkflowV1alpha1Workflow, Integer, Hash)>] IoArgoprojWorkflowV1alpha1Workflow data, response status code and response headers
     def set_workflow_with_http_info(namespace, name, body, opts = {})
@@ -797,9 +797,9 @@ module ArgoWorkflows
       return data, status_code, headers
     end
 
-    # @param namespace [String] 
-    # @param name [String] 
-    # @param body [IoArgoprojWorkflowV1alpha1WorkflowStopRequest] 
+    # @param namespace [String]
+    # @param name [String]
+    # @param body [IoArgoprojWorkflowV1alpha1WorkflowStopRequest]
     # @param [Hash] opts the optional parameters
     # @return [IoArgoprojWorkflowV1alpha1Workflow]
     def stop_workflow(namespace, name, body, opts = {})
@@ -807,9 +807,9 @@ module ArgoWorkflows
       data
     end
 
-    # @param namespace [String] 
-    # @param name [String] 
-    # @param body [IoArgoprojWorkflowV1alpha1WorkflowStopRequest] 
+    # @param namespace [String]
+    # @param name [String]
+    # @param body [IoArgoprojWorkflowV1alpha1WorkflowStopRequest]
     # @param [Hash] opts the optional parameters
     # @return [Array<(IoArgoprojWorkflowV1alpha1Workflow, Integer, Hash)>] IoArgoprojWorkflowV1alpha1Workflow data, response status code and response headers
     def stop_workflow_with_http_info(namespace, name, body, opts = {})
@@ -870,8 +870,8 @@ module ArgoWorkflows
       return data, status_code, headers
     end
 
-    # @param namespace [String] 
-    # @param body [IoArgoprojWorkflowV1alpha1WorkflowSubmitRequest] 
+    # @param namespace [String]
+    # @param body [IoArgoprojWorkflowV1alpha1WorkflowSubmitRequest]
     # @param [Hash] opts the optional parameters
     # @return [IoArgoprojWorkflowV1alpha1Workflow]
     def submit_workflow(namespace, body, opts = {})
@@ -879,8 +879,8 @@ module ArgoWorkflows
       data
     end
 
-    # @param namespace [String] 
-    # @param body [IoArgoprojWorkflowV1alpha1WorkflowSubmitRequest] 
+    # @param namespace [String]
+    # @param body [IoArgoprojWorkflowV1alpha1WorkflowSubmitRequest]
     # @param [Hash] opts the optional parameters
     # @return [Array<(IoArgoprojWorkflowV1alpha1Workflow, Integer, Hash)>] IoArgoprojWorkflowV1alpha1Workflow data, response status code and response headers
     def submit_workflow_with_http_info(namespace, body, opts = {})
@@ -937,9 +937,9 @@ module ArgoWorkflows
       return data, status_code, headers
     end
 
-    # @param namespace [String] 
-    # @param name [String] 
-    # @param body [IoArgoprojWorkflowV1alpha1WorkflowSuspendRequest] 
+    # @param namespace [String]
+    # @param name [String]
+    # @param body [IoArgoprojWorkflowV1alpha1WorkflowSuspendRequest]
     # @param [Hash] opts the optional parameters
     # @return [IoArgoprojWorkflowV1alpha1Workflow]
     def suspend_workflow(namespace, name, body, opts = {})
@@ -947,9 +947,9 @@ module ArgoWorkflows
       data
     end
 
-    # @param namespace [String] 
-    # @param name [String] 
-    # @param body [IoArgoprojWorkflowV1alpha1WorkflowSuspendRequest] 
+    # @param namespace [String]
+    # @param name [String]
+    # @param body [IoArgoprojWorkflowV1alpha1WorkflowSuspendRequest]
     # @param [Hash] opts the optional parameters
     # @return [Array<(IoArgoprojWorkflowV1alpha1Workflow, Integer, Hash)>] IoArgoprojWorkflowV1alpha1Workflow data, response status code and response headers
     def suspend_workflow_with_http_info(namespace, name, body, opts = {})
@@ -1010,9 +1010,9 @@ module ArgoWorkflows
       return data, status_code, headers
     end
 
-    # @param namespace [String] 
-    # @param name [String] 
-    # @param body [IoArgoprojWorkflowV1alpha1WorkflowTerminateRequest] 
+    # @param namespace [String]
+    # @param name [String]
+    # @param body [IoArgoprojWorkflowV1alpha1WorkflowTerminateRequest]
     # @param [Hash] opts the optional parameters
     # @return [IoArgoprojWorkflowV1alpha1Workflow]
     def terminate_workflow(namespace, name, body, opts = {})
@@ -1020,9 +1020,9 @@ module ArgoWorkflows
       data
     end
 
-    # @param namespace [String] 
-    # @param name [String] 
-    # @param body [IoArgoprojWorkflowV1alpha1WorkflowTerminateRequest] 
+    # @param namespace [String]
+    # @param name [String]
+    # @param body [IoArgoprojWorkflowV1alpha1WorkflowTerminateRequest]
     # @param [Hash] opts the optional parameters
     # @return [Array<(IoArgoprojWorkflowV1alpha1Workflow, Integer, Hash)>] IoArgoprojWorkflowV1alpha1Workflow data, response status code and response headers
     def terminate_workflow_with_http_info(namespace, name, body, opts = {})
@@ -1083,7 +1083,7 @@ module ArgoWorkflows
       return data, status_code, headers
     end
 
-    # @param namespace [String] 
+    # @param namespace [String]
     # @param [Hash] opts the optional parameters
     # @option opts [String] :list_options_label_selector A selector to restrict the list of returned objects by their labels. Defaults to everything. +optional.
     # @option opts [String] :list_options_field_selector A selector to restrict the list of returned objects by their fields. Defaults to everything. +optional.
@@ -1100,7 +1100,7 @@ module ArgoWorkflows
       data
     end
 
-    # @param namespace [String] 
+    # @param namespace [String]
     # @param [Hash] opts the optional parameters
     # @option opts [String] :list_options_label_selector A selector to restrict the list of returned objects by their labels. Defaults to everything. +optional.
     # @option opts [String] :list_options_field_selector A selector to restrict the list of returned objects by their fields. Defaults to everything. +optional.
@@ -1169,7 +1169,7 @@ module ArgoWorkflows
       return data, status_code, headers
     end
 
-    # @param namespace [String] 
+    # @param namespace [String]
     # @param [Hash] opts the optional parameters
     # @option opts [String] :list_options_label_selector A selector to restrict the list of returned objects by their labels. Defaults to everything. +optional.
     # @option opts [String] :list_options_field_selector A selector to restrict the list of returned objects by their fields. Defaults to everything. +optional.
@@ -1180,14 +1180,14 @@ module ArgoWorkflows
     # @option opts [String] :list_options_timeout_seconds Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity. +optional.
     # @option opts [String] :list_options_limit limit is a maximum number of responses to return for a list call. If more items exist, the server will set the &#x60;continue&#x60; field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
     # @option opts [String] :list_options_continue The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \&quot;next key\&quot;.  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
-    # @option opts [String] :fields 
+    # @option opts [String] :fields
     # @return [StreamResultOfIoArgoprojWorkflowV1alpha1WorkflowWatchEvent]
     def watch_workflows(namespace, opts = {})
       data, _status_code, _headers = watch_workflows_with_http_info(namespace, opts)
       data
     end
 
-    # @param namespace [String] 
+    # @param namespace [String]
     # @param [Hash] opts the optional parameters
     # @option opts [String] :list_options_label_selector A selector to restrict the list of returned objects by their labels. Defaults to everything. +optional.
     # @option opts [String] :list_options_field_selector A selector to restrict the list of returned objects by their fields. Defaults to everything. +optional.
@@ -1198,7 +1198,7 @@ module ArgoWorkflows
     # @option opts [String] :list_options_timeout_seconds Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity. +optional.
     # @option opts [String] :list_options_limit limit is a maximum number of responses to return for a list call. If more items exist, the server will set the &#x60;continue&#x60; field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
     # @option opts [String] :list_options_continue The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \&quot;next key\&quot;.  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
-    # @option opts [String] :fields 
+    # @option opts [String] :fields
     # @return [Array<(StreamResultOfIoArgoprojWorkflowV1alpha1WorkflowWatchEvent, Integer, Hash)>] StreamResultOfIoArgoprojWorkflowV1alpha1WorkflowWatchEvent data, response status code and response headers
     def watch_workflows_with_http_info(namespace, opts = {})
       if @api_client.config.debugging
@@ -1258,10 +1258,10 @@ module ArgoWorkflows
       return data, status_code, headers
     end
 
-    # @param namespace [String] 
-    # @param name [String] 
+    # @param namespace [String]
+    # @param name [String]
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :pod_name 
+    # @option opts [String] :pod_name
     # @option opts [String] :log_options_container The container for which to stream logs. Defaults to only container if there is one container in the pod. +optional.
     # @option opts [Boolean] :log_options_follow Follow the log stream of the pod. Defaults to false. +optional.
     # @option opts [Boolean] :log_options_previous Return previous terminated container logs. Defaults to false. +optional.
@@ -1272,18 +1272,18 @@ module ArgoWorkflows
     # @option opts [String] :log_options_tail_lines If set, the number of lines from the end of the logs to show. If not specified, logs are shown from the creation of the container or sinceSeconds or sinceTime +optional.
     # @option opts [String] :log_options_limit_bytes If set, the number of bytes to read from the server before terminating the log output. This may not display a complete final line of logging, and may return slightly more or slightly less than the specified limit. +optional.
     # @option opts [Boolean] :log_options_insecure_skip_tls_verify_backend insecureSkipTLSVerifyBackend indicates that the apiserver should not confirm the validity of the serving certificate of the backend it is connecting to.  This will make the HTTPS connection between the apiserver and the backend insecure. This means the apiserver cannot verify the log data it is receiving came from the real kubelet.  If the kubelet is configured to verify the apiserver&#39;s TLS credentials, it does not mean the connection to the real kubelet is vulnerable to a man in the middle attack (e.g. an attacker could not intercept the actual log data coming from the real kubelet). +optional.
-    # @option opts [String] :grep 
-    # @option opts [String] :selector 
+    # @option opts [String] :grep
+    # @option opts [String] :selector
     # @return [StreamResultOfIoArgoprojWorkflowV1alpha1LogEntry]
     def workflow_logs(namespace, name, opts = {})
       data, _status_code, _headers = workflow_logs_with_http_info(namespace, name, opts)
-      data
+      { entries: data }
     end
 
-    # @param namespace [String] 
-    # @param name [String] 
+    # @param namespace [String]
+    # @param name [String]
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :pod_name 
+    # @option opts [String] :pod_name
     # @option opts [String] :log_options_container The container for which to stream logs. Defaults to only container if there is one container in the pod. +optional.
     # @option opts [Boolean] :log_options_follow Follow the log stream of the pod. Defaults to false. +optional.
     # @option opts [Boolean] :log_options_previous Return previous terminated container logs. Defaults to false. +optional.
@@ -1294,8 +1294,8 @@ module ArgoWorkflows
     # @option opts [String] :log_options_tail_lines If set, the number of lines from the end of the logs to show. If not specified, logs are shown from the creation of the container or sinceSeconds or sinceTime +optional.
     # @option opts [String] :log_options_limit_bytes If set, the number of bytes to read from the server before terminating the log output. This may not display a complete final line of logging, and may return slightly more or slightly less than the specified limit. +optional.
     # @option opts [Boolean] :log_options_insecure_skip_tls_verify_backend insecureSkipTLSVerifyBackend indicates that the apiserver should not confirm the validity of the serving certificate of the backend it is connecting to.  This will make the HTTPS connection between the apiserver and the backend insecure. This means the apiserver cannot verify the log data it is receiving came from the real kubelet.  If the kubelet is configured to verify the apiserver&#39;s TLS credentials, it does not mean the connection to the real kubelet is vulnerable to a man in the middle attack (e.g. an attacker could not intercept the actual log data coming from the real kubelet). +optional.
-    # @option opts [String] :grep 
-    # @option opts [String] :selector 
+    # @option opts [String] :grep
+    # @option opts [String] :selector
     # @return [Array<(StreamResultOfIoArgoprojWorkflowV1alpha1LogEntry, Integer, Hash)>] StreamResultOfIoArgoprojWorkflowV1alpha1LogEntry data, response status code and response headers
     def workflow_logs_with_http_info(namespace, name, opts = {})
       if @api_client.config.debugging
